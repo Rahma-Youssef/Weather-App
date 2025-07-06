@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>contact</title>
+
+    <!---------- google fonts ---------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!---------- font awesomw ----------->
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <!---------- Css Bootstrap ---------->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!---------- Css File ---------->
+    <link rel="stylesheet" href="../../css/weatherApp.css">
+    <link rel="stylesheet" href="../../css/media.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container w-navbar">
+            <a class="navbar-brand text-white  py-5  d-flex align-items-center gap-3" href="#">
+                <img src="../../images/cloud-icon.png" class="w-25" alt="">
+                <div>
+                    <p class="m-0 fs-6 fw-bold">Company name</p>
+                    <p class="m-0  site-descr">tagline goes here</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <p class="bars-icon"><i class="fa-solid fa-bars icon"></i></p>
+
+            </button>
+            <div class="collapse navbar-collapse bg-sideNavbar" id="navbarNav">
+                <ul class="navbar-nav text-center ms-auto" id="nav-links">
+                    <li class="nav-item ">
+                        <a class="nav-link accordion    fw-medium  Active-link px-3" id="activen"
+                            aria-current="page" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link   fw-medium  Active-link px-3" href="#news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link    fw-medium Active-link px-3" href="#livecameras">Live cameras
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link    fw-medium Active-link px-3" href="#photos">Photos</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link active  fw-medium Active-link px-3" href="./pages/contact/contact.html">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-75 m-auto">
+        <div class="container ">
+            <section>
+                <div class="bg-tabs-contact py-3 ps-5 fw-light rounded-5 d-flex align-items-center text-white-50 gap-2">
+                    Home <i class="fa-solid fa-arrow-right"></i> <span class="text-white">Contact</span>
+                </div>
+            </section>
+            <section class="py-5">
+
+                <div class="container">
+                    <div class="row text-white">
+                        <div class="col-lg-6  mt-5">
+                            <div class="card  map-card">
+                                <iframe class="card-img-top"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423289.70589859196!2d-119.03565983441378!3d34.019473125941566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2seg!4v1751724623178!5m2!1sen!2seg"
+                                    height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                                <div class="card-body">
+                                    <div class="d-flex gap-3 mb-3 ">
+                                        <i class="fa-solid fa-location-dot mt-2"></i>
+                                        <div>
+                                            <p class="card-text m-0 fw-light"> Company Name INC.</p>
+
+                                            <p class="m-0 fw-light">2803 Avenue Street, Los Angeles</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex gap-4">
+                                        <div><i class="fa-solid fa-phone"></i> <span class="ms-2 fw-light">+1 800 314
+                                                235</span></div>
+                                        <div><i class="fa-solid fa-envelope"></i> <span
+                                                class="ms-2 fw-light">contact@companyname.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 contact-content mt-5 ">
+                            <h2>Contact us</h2>
+                            <p class="fw-light ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+                                consectetur inventore
+                                ducimus,
+                                facilis, numquam id soluta omnis eius recusandae nesciunt vero repellat harum cum. Nisi
+                                facilis
+                                odit hic, ipsum sed!</p>
+                            <div class="d-flex gap-2 mb-2">
+                                <input type="text"
+                                    class="form-control contact-Input rounded-5 bg-transparent text-white "
+                                    id="exampleFormControlInput1" placeholder="Your name...">
+                                <input type="email"
+                                    class="form-control  contact-Input rounded-5 bg-transparent text-white "
+                                    id="exampleFormControlInput1" placeholder="Email Address...">
+                            </div>
+                            <div class="d-flex gap-2 mb-2">
+                                <input type="text"
+                                    class="form-control contact-Input rounded-5 bg-transparent text-white "
+                                    id="exampleFormControlInput1" placeholder="Company name...">
+                                <input type="url"
+                                    class="form-control  contact-Input rounded-5 bg-transparent text-white "
+                                    id="exampleFormControlInput1" placeholder="Website...">
+                            </div>
+                            <div>
+                                <textarea class="form-control contact-Input rounded-5 bg-transparent text-white"
+                                    placeholder="Message..." id="floatingTextarea" rows="5"></textarea>
+
+                            </div>
+
+                            <input
+                                class="btn btn-contact rounded-5 mt-2 text-white px-3 ms-auto d-flex justify-content-end"
+                                type="submit" value="Submit">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <footer class="py-5">
+        <div class="container  w-75">
+            <div class="row ">
+                <div class="col-md-8">
+                    <div class="bg-input py-1 ps-3 pe-1 rounded-5 d-flex">
+                        <input type="text" class="w-100 bg-transparent input-location text-white"
+                            placeholder="Enter your email to Subscribe...">
+                        <button class="btn  rounded-5 px-3 text-white">Subscribe</button>
+                    </div>
+                    <p class="text-white-50 mt-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved
+                    </p>
+                </div>
+
+                <div class="col-md-4 mx-auto">
+                    <div class="d-flex gap-2 align-items-center justify-content-center footer-icon ">
+                        <a href="#" class="d-flex justify-content-center align-items-center"><i
+                                class="fa-brand  fab fa-facebook-f"></i></a>
+                        <a href="#" class="d-flex justify-content-center align-items-center"><i
+                                class="fa-brand  fab fa-twitter"></i></a>
+                        <a href="#" class="d-flex justify-content-center align-items-center"><i
+                                class="fa-brand  fab fa-google-plus-g"></i></a>
+                        <a href="#" class="d-flex justify-content-center align-items-center"><i
+                                class="fa-brand  fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
