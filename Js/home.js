@@ -23,11 +23,11 @@ function getWeatherData(cityName) {
 
   fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no&alerts=no`)
     .then(response => response.json())
-    .then(data =>displayWeather(data)) 
-  
+    .then(data => displayWeather(data))
+
     .catch(err => {
       errorMessage.innerHTML = `<p class="alert alert-danger mt-3 w-50 mx-auto"  role="alert"> Please enter a valid city name </p>`;
-    
+
     });
 }
 
@@ -66,7 +66,7 @@ function displayWeather(data) {
 
     const bgcoloerMiddleCard = i === 1 ? "bg-Middle-Card" : "";
 
-      const dayHeaderClass = bgcoloerMiddleCard ? "day-header special-bg" : "day-header";
+    const dayHeaderClass = bgcoloerMiddleCard ? "day-header special-bg" : "day-header";
 
     weatherDiv.innerHTML += `
       <div class="col-lg-4  ${bgcoloerMiddleCard}">
