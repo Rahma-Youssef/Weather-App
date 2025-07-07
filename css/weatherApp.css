@@ -123,10 +123,13 @@ a {
 
 .input-location {
     border: none;
+   
+  
 }
 
 .input-location:focus {
     outline: none;
+   
 }
 
 .bg-input button {
