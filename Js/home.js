@@ -10,7 +10,6 @@ const apiKey = "10d68c62f0934d65a67131343250107";
 function getDayName(numberofDate) {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const date = new Date(numberofDate);
-    // const monthName = date.toLocaleString('default', { month: 'long' });
     return days[date.getDay()];
 }
 
