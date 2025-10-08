@@ -8,41 +8,45 @@ const apiKey = "10d68c62f0934d65a67131343250107";
 
 
 function getDayName(numberofDate) {
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const date = new Date(numberofDate);
-  return days[date.getDay()];
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const date = new Date(numberofDate);
+    // const monthName = date.toLocaleString('default', { month: 'long' });
+    return days[date.getDay()];
 }
 
-window.onload = function () {
-  getWeatherData("Cairo");
+window.onload = function() {
+    getWeatherData("Cairo");
 };
 
 
 function getWeatherData(cityName) {
-  let city = cityName || inputLocation.value.trim();
+    let city = cityName || inputLocation.value.trim();
 
-  fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no&alerts=no`)
-    .then(response => response.json())
-    .then(data => displayWeather(data))
-
-    .catch(err => {
-      errorMessage.innerHTML = `<p class="alert alert-danger mt-3 w-50 mx-auto"  role="alert"> Please enter a valid city name </p>`;
-
-    });
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no&alerts=no`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("City not found");
+            }
+            return response.json();
+        })
+        .then(data => displayWeather(data))
+        .catch(err => {
+            errorMessage.innerHTML = `<p class="alert alert-danger mt-3 w-50 mx-auto" role="alert">${err.message}</p>`;
+        });
 }
 
 
-searchBtn.addEventListener("click", function () {
-  getWeatherData();
+searchBtn.addEventListener("click", function() {
+    getWeatherData();
 });
 
 
 
 function displayWeather(data) {
-  const current = data.current;
-  const today = data.forecast.forecastday[0];
+    const current = data.current;
+    const today = data.forecast.forecastday[0];
 
-  weatherDiv.innerHTML = `
+    weatherDiv.innerHTML = `
     <div class="weather-card  col-lg-4">
       <div class="day-header d-flex justify-content-between align-items-between p-2   ">
         <span class="fw-light">${getDayName(today.date)}</span>
@@ -61,14 +65,14 @@ function displayWeather(data) {
     </div>
   `;
 
-  for (let i = 1; i < 3; i++) {
-    const day = data.forecast.forecastday[i];
+    for (let i = 1; i < 3; i++) {
+        const day = data.forecast.forecastday[i];
 
-    const bgcoloerMiddleCard = i === 1 ? "bg-Middle-Card" : "";
+        const bgcoloerMiddleCard = i === 1 ? "bg-Middle-Card" : "";
 
-    const dayHeaderClass = bgcoloerMiddleCard ? "day-header special-bg" : "day-header";
+        const dayHeaderClass = bgcoloerMiddleCard ? "day-header special-bg" : "day-header";
 
-    weatherDiv.innerHTML += `
+        weatherDiv.innerHTML += `
       <div class="col-lg-4  ${bgcoloerMiddleCard}">
         <div class="day-header text-center p-2 ${dayHeaderClass}">
           <span class="fw-light">${getDayName(day.date)}</span>
@@ -85,5 +89,5 @@ function displayWeather(data) {
  
       </div>
     `;
-  }
+    }
 }
